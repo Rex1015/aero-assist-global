@@ -16,16 +16,26 @@
 
 <body>
 
+
+<!-- NAVBAR -->
+
 <header class="navbar">
 
 <img src="images/logo.png" class="logo">
 
 <nav>
 <ul>
+
 <li><a href="index.html">Home</a></li>
+
 <li><a href="about.html">About</a></li>
-<li><a href="fleet.html">Fleet</a></li>
-<li><a href="contact.html">Inquiry</a></li>
+
+<li><a href="index.html#services">Services</a></li>
+
+<li><a href="booking.html">Booking</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
 </ul>
 </nav>
 
@@ -33,7 +43,7 @@
 
 
 
-<!-- HERO VIDEO SECTION -->
+<!-- HERO SECTION -->
 
 <section class="hero">
 
@@ -41,15 +51,13 @@
 <source src="video/hero.mp4" type="video/mp4">
 </video>
 
-<div class="hero-overlay"></div>
-
 <div class="hero-content">
 
 <h1>Aero Assist Global</h1>
 
 <p>Worldwide Aviation Support & Flight Coordination</p>
 
-<a href="contact.html" class="hero-btn">Send Inquiry</a>
+<a href="booking.html" class="btn">Request a Flight</a>
 
 </div>
 
@@ -57,37 +65,112 @@
 
 
 
-<!-- SERVICES -->
+<!-- SERVICES SECTION -->
 
-<section class="services">
+<section id="services" class="services-section">
 
-<h2>Our Services</h2>
+<h2>Our Aviation Services</h2>
 
-<div class="service-grid">
+<div class="service-tabs">
 
-<div class="service-card">
+<button class="tab-btn active" onclick="showService('charter')">
+Charter
+</button>
 
-<h3>Flight Coordination</h3>
+<button class="tab-btn" onclick="showService('ground')">
+Ground Handling
+</button>
 
-<p>24/7 flight support and global operational coordination.</p>
+<button class="tab-btn" onclick="showService('permits')">
+Permits
+</button>
 
 </div>
 
-<div class="service-card">
+
+
+<!-- CHARTER -->
+
+<div id="charter" class="service-content active">
+
+<h3>Aircraft Charter</h3>
+
+<p>
+
+Aero Assist Global provides executive and VIP charter coordination for private jets,
+business aircraft, and helicopters worldwide.
+
+</p>
+
+<ul>
+
+<li>Private Jet Charter</li>
+
+<li>Executive Travel</li>
+
+<li>VIP Flight Support</li>
+
+<li>Aircraft Scheduling</li>
+
+</ul>
+
+</div>
+
+
+
+<!-- GROUND HANDLING -->
+
+<div id="ground" class="service-content">
 
 <h3>Ground Handling</h3>
 
-<p>Airport ground logistics, fueling, and aircraft handling support.</p>
+<p>
+
+We coordinate premium ground handling services to ensure seamless
+operations at international airports.
+
+</p>
+
+<ul>
+
+<li>Ramp Handling</li>
+
+<li>Fuel Coordination</li>
+
+<li>Passenger Services</li>
+
+<li>Airport Logistics</li>
+
+</ul>
 
 </div>
 
-<div class="service-card">
 
-<h3>VIP Aviation Support</h3>
 
-<p>Premium support for private jets and executive aviation.</p>
+<!-- PERMITS -->
 
-</div>
+<div id="permits" class="service-content">
+
+<h3>Flight Permits</h3>
+
+<p>
+
+Our team manages aviation permits and regulatory approvals required
+for international flight operations.
+
+</p>
+
+<ul>
+
+<li>Overflight Permits</li>
+
+<li>Landing Permits</li>
+
+<li>Diplomatic Permits</li>
+
+<li>Regulatory Coordination</li>
+
+</ul>
 
 </div>
 
@@ -95,30 +178,44 @@
 
 
 
-<!-- FLEET PREVIEW -->
+<!-- STATISTICS -->
 
-<section class="fleet-preview">
+<section class="stats">
 
-<h2>Supported Aircraft</h2>
+<div class="stat">
 
-<div class="fleet-grid">
-
-<div class="fleet-card">
-<img src="images/fleet1.jpg">
-<h3>Private Jet</h3>
-</div>
-
-<div class="fleet-card">
-<img src="images/fleet2.jpg">
-<h3>Charter Aircraft</h3>
-</div>
-
-<div class="fleet-card">
-<img src="images/fleet3.jpg">
-<h3>VIP Helicopter</h3>
-</div>
+<h2 class="counter">120</h2>
+<p>Airports Supported</p>
 
 </div>
+
+<div class="stat">
+
+<h2 class="counter">45</h2>
+<p>Aircraft Assisted</p>
+
+</div>
+
+<div class="stat">
+
+<h2 class="counter">24</h2>
+<p>Hour Operations</p>
+
+</div>
+
+</section>
+
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+<h2>Need Aviation Support?</h2>
+
+<p>Our operations team is available 24/7 worldwide.</p>
+
+<a href="booking.html" class="btn">Submit Flight Request</a>
 
 </section>
 
@@ -126,9 +223,11 @@
 
 <footer>
 
-<p>© 2026 Aero Assist Global</p>
+<p>© 2026 Aero Assist Global | Worldwide Aviation Support</p>
 
 </footer>
+
+
 
 <script src="js/script.js"></script>
 
