@@ -1,37 +1,89 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<title>Booking</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Booking | Aero Assist Global</title>
+
 <link rel="stylesheet" href="css/style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
-<header>
-<h1>Aero Assist Global</h1>
+
+<header class="navbar">
+
+<img src="images/logo.png" class="logo">
+
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="fleet.html">Fleet</a></li>
+<li><a href="booking.html">Booking</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+
 </header>
 
-<section class="services">
 
-<h2>Flight Booking</h2>
+<div class="page-bg" style="background-image:url('images/backgrounds/runway.jpg')">
 
-<form>
 
-<input type="text" placeholder="Full Name"><br><br>
+<section class="booking-section">
 
-<input type="email" placeholder="Email"><br><br>
+<h1>Request a Flight</h1>
 
-<input type="text" placeholder="Departure City"><br><br>
+<p>Submit your charter request and our operations team will assist you.</p>
 
-<input type="text" placeholder="Destination"><br><br>
 
-<input type="date"><br><br>
+<form id="bookingForm" class="booking-form">
 
-<button class="btn">Submit Booking</button>
+<input type="text" placeholder="Full Name" required>
+
+<input type="email" placeholder="Email Address" required>
+
+<input type="text" placeholder="Departure City">
+
+<input type="text" placeholder="Destination">
+
+<input type="date">
+
+<select>
+
+<option>Select Aircraft Type</option>
+<option>Private Jet</option>
+<option>Charter Aircraft</option>
+<option>Helicopter</option>
+
+</select>
+
+<button class="btn">Submit Request</button>
 
 </form>
 
+<p id="confirmation"></p>
+
 </section>
+
+
+</div>
+
+
+<footer>
+
+<p>© 2026 Aero Assist Global</p>
+
+</footer>
+
+<script src="js/script.js"></script>
 
 </body>
 </html>
