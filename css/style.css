@@ -241,4 +241,65 @@ text-align:center;
 padding:30px;
 background:#111;
 
+/* DROPDOWN SERVICES */
+
+.dropdown{
+
+position:relative;
+
 }
+
+.dropdown-content{
+
+position:absolute;
+top:40px;
+left:0;
+background:#111;
+border:1px solid silver;
+display:none;
+flex-direction:column;
+min-width:180px;
+box-shadow:0 0 10px rgba(0,0,0,0.5);
+
+}
+
+.dropdown-content a{
+
+padding:12px;
+text-decoration:none;
+color:silver;
+transition:0.3s;
+
+}
+
+.dropdown-content a:hover{
+
+background:silver;
+color:black;
+padding-left:18px;
+
+}
+
+.dropdown:hover .dropdown-content{
+
+display:flex;
+animation:dropdownFade 0.3s ease;
+
+}
+
+@keyframes dropdownFade{
+
+from{
+opacity:0;
+transform:translateY(-10px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+}
+
