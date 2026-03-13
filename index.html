@@ -17,25 +17,16 @@
 <body>
 
 
-<!-- NAVBAR -->
-
 <header class="navbar">
 
 <img src="images/logo.png" class="logo">
 
 <nav>
 <ul>
-
 <li><a href="index.html">Home</a></li>
-
 <li><a href="about.html">About</a></li>
-
-<li><a href="index.html#services">Services</a></li>
-
-<li><a href="booking.html">Booking</a></li>
-
+<li><a href="services.html">Services</a></li>
 <li><a href="contact.html">Contact</a></li>
-
 </ul>
 </nav>
 
@@ -43,13 +34,13 @@
 
 
 
-<!-- HERO SECTION -->
-
 <section class="hero">
 
-<video autoplay muted loop class="hero-video">
-<source src="video/hero.mp4" type="video/mp4">
+<video autoplay muted loop playsinline class="hero-video">
+<source src="video/aviation.mp4" type="video/mp4">
 </video>
+
+<div class="hero-overlay"></div>
 
 <div class="hero-content">
 
@@ -57,7 +48,7 @@
 
 <p>Worldwide Aviation Support & Flight Coordination</p>
 
-<a href="booking.html" class="btn">Request a Flight</a>
+<a href="services.html" class="btn">Explore Services</a>
 
 </div>
 
@@ -65,157 +56,15 @@
 
 
 
-<!-- SERVICES SECTION -->
+<section class="intro">
 
-<section id="services" class="services-section">
-
-<h2>Our Aviation Services</h2>
-
-<div class="service-tabs">
-
-<button class="tab-btn active" onclick="showService('charter')">
-Charter
-</button>
-
-<button class="tab-btn" onclick="showService('ground')">
-Ground Handling
-</button>
-
-<button class="tab-btn" onclick="showService('permits')">
-Permits
-</button>
-
-</div>
-
-
-
-<!-- CHARTER -->
-
-<div id="charter" class="service-content active">
-
-<h3>Aircraft Charter</h3>
+<h2>Global Aviation Support</h2>
 
 <p>
-
-Aero Assist Global provides executive and VIP charter coordination for private jets,
-business aircraft, and helicopters worldwide.
-
+Aero Assist Global provides professional aviation support services
+including charter coordination, ground handling, and flight permits
+for international aviation operations.
 </p>
-
-<ul>
-
-<li>Private Jet Charter</li>
-
-<li>Executive Travel</li>
-
-<li>VIP Flight Support</li>
-
-<li>Aircraft Scheduling</li>
-
-</ul>
-
-</div>
-
-
-
-<!-- GROUND HANDLING -->
-
-<div id="ground" class="service-content">
-
-<h3>Ground Handling</h3>
-
-<p>
-
-We coordinate premium ground handling services to ensure seamless
-operations at international airports.
-
-</p>
-
-<ul>
-
-<li>Ramp Handling</li>
-
-<li>Fuel Coordination</li>
-
-<li>Passenger Services</li>
-
-<li>Airport Logistics</li>
-
-</ul>
-
-</div>
-
-
-
-<!-- PERMITS -->
-
-<div id="permits" class="service-content">
-
-<h3>Flight Permits</h3>
-
-<p>
-
-Our team manages aviation permits and regulatory approvals required
-for international flight operations.
-
-</p>
-
-<ul>
-
-<li>Overflight Permits</li>
-
-<li>Landing Permits</li>
-
-<li>Diplomatic Permits</li>
-
-<li>Regulatory Coordination</li>
-
-</ul>
-
-</div>
-
-</section>
-
-
-
-<!-- STATISTICS -->
-
-<section class="stats">
-
-<div class="stat">
-
-<h2 class="counter">120</h2>
-<p>Airports Supported</p>
-
-</div>
-
-<div class="stat">
-
-<h2 class="counter">45</h2>
-<p>Aircraft Assisted</p>
-
-</div>
-
-<div class="stat">
-
-<h2 class="counter">24</h2>
-<p>Hour Operations</p>
-
-</div>
-
-</section>
-
-
-
-<!-- CTA -->
-
-<section class="cta">
-
-<h2>Need Aviation Support?</h2>
-
-<p>Our operations team is available 24/7 worldwide.</p>
-
-<a href="booking.html" class="btn">Submit Flight Request</a>
 
 </section>
 
@@ -223,14 +72,11 @@ for international flight operations.
 
 <footer>
 
-<p>© 2026 Aero Assist Global | Worldwide Aviation Support</p>
+<p>© 2026 Aero Assist Global</p>
 
 </footer>
-
-
 
 <script src="js/script.js"></script>
 
 </body>
-
 </html>
