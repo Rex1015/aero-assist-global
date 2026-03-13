@@ -1,185 +1,271 @@
-body{
+*{
 margin:0;
-font-family:Montserrat, sans-serif;
-background:black;
-color:silver;
+padding:0;
+box-sizing:border-box;
 }
 
+body{
+
+font-family:'Montserrat', sans-serif;
+background:black;
+color:silver;
+line-height:1.6;
+
+}
+
+
+/* NAVBAR */
+
 .navbar{
+
 display:flex;
 justify-content:space-between;
 align-items:center;
 padding:20px 60px;
-background:rgba(0,0,0,0.7);
-backdrop-filter:blur(10px);
+background:rgba(0,0,0,0.8);
 position:sticky;
 top:0;
 z-index:1000;
+
 }
 
 .logo{
+
 height:60px;
+
 }
 
 nav ul{
+
 display:flex;
 gap:30px;
 list-style:none;
+
 }
 
 nav a{
+
 color:silver;
 text-decoration:none;
 transition:0.3s;
+
 }
 
 nav a:hover{
+
 color:white;
+
 }
 
-.hero{
-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
+
+/* BACKGROUND LOGO WATERMARK */
+
+.page-bg{
+
+min-height:100vh;
 position:relative;
+padding:100px 40px;
+
 }
 
-.hero-video{
+.page-bg::before{
+
+content:"";
 position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+background:url("../images/logo.png") no-repeat center;
+background-size:500px;
 width:100%;
 height:100%;
-object-fit:cover;
-z-index:-1;
+opacity:0.05;
+pointer-events:none;
+
 }
 
-.hero-content h1{
-font-size:60px;
+
+/* GENERAL SECTIONS */
+
+section{
+
+max-width:1000px;
+margin:auto;
+margin-bottom:80px;
+
 }
+
+h1,h2,h3{
+
+color:white;
+margin-bottom:20px;
+
+}
+
+p{
+
+margin-bottom:20px;
+
+}
+
+
+/* AUTO IMAGE RESIZE */
+
+img{
+
+max-width:100%;
+height:auto;
+display:block;
+border-radius:8px;
+
+}
+
+
+/* BUTTON */
 
 .btn{
+
+display:inline-block;
+padding:12px 25px;
 background:silver;
 color:black;
-padding:12px 25px;
-border-radius:5px;
 text-decoration:none;
+border-radius:5px;
 transition:0.3s;
+
 }
 
 .btn:hover{
-transform:scale(1.1);
+
 background:white;
+transform:scale(1.05);
+
 }
 
-.page-bg{
-min-height:100vh;
-background-size:cover;
-background-position:center;
-background-attachment:fixed;
-padding-top:120px;
-}
 
-.stats{
+/* SERVICES */
+
+.service-tabs{
+
 display:flex;
-justify-content:center;
-gap:80px;
-padding:80px;
-text-align:center;
-}
-
-.stat h2{
-font-size:50px;
-color:white;
-}
-
-.fleet-slider{
-text-align:center;
-padding:80px;
-}
-
-.slider{
-display:flex;
-overflow:auto;
 gap:20px;
-padding:20px;
+justify-content:center;
+margin-bottom:40px;
+
 }
 
-.slider img{
-width:350px;
-border-radius:10px;
-transition:0.4s;
+.tab-btn{
+
+background:#111;
+border:1px solid silver;
+color:silver;
+padding:12px 20px;
+cursor:pointer;
+transition:0.3s;
+
 }
 
-.slider img:hover{
-transform:scale(1.1);
+.tab-btn:hover{
+
+background:silver;
+color:black;
+
 }
 
-.booking-section{
-padding:80px;
-background:rgba(0,0,0,0.75);
+.tab-btn.active{
+
+background:silver;
+color:black;
+
 }
 
-.booking-form{
-display:flex;
-flex-direction:column;
-gap:15px;
-max-width:400px;
+.service-content{
+
+display:none;
+animation:fade 0.4s ease;
+
 }
 
-.booking-form input,
-.booking-form select{
-padding:12px;
-border:none;
-border-radius:5px;
+.service-content.active{
+
+display:block;
+
 }
 
-.contact-section{
-padding:80px;
-background:rgba(0,0,0,0.75);
+@keyframes fade{
+
+from{opacity:0; transform:translateY(10px);}
+to{opacity:1; transform:translateY(0);}
+
 }
+
+
+/* CONTACT */
 
 .contact-grid{
-display:flex;
-gap:60px;
-flex-wrap:wrap;
+
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+
 }
 
 .contact-form{
+
 display:flex;
 flex-direction:column;
 gap:15px;
+
 }
 
 .contact-form input,
 .contact-form textarea{
+
 padding:12px;
-border-radius:5px;
 border:none;
+border-radius:5px;
+
 }
 
 .contact-form textarea{
+
 height:120px;
+
 }
 
+
+/* FOOTER */
+
 footer{
+
 text-align:center;
-padding:20px;
+padding:30px;
 background:#111;
+
 }
+
+
+/* MOBILE */
 
 @media(max-width:768px){
 
-nav ul{
+.navbar{
+
 flex-direction:column;
+gap:20px;
+
 }
 
-.stats{
+nav ul{
+
 flex-direction:column;
+
 }
 
 .contact-grid{
-flex-direction:column;
+
+grid-template-columns:1fr;
+
 }
 
 }
